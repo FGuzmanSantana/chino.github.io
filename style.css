@@ -1,0 +1,304 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#fff7f0;
+    color:#222;
+}
+
+/* HEADER */
+
+header{
+    background:#8b0000;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    color:gold;
+    font-size:1.5rem;
+    font-weight:bold;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:gold;
+}
+
+/* HERO */
+
+.hero{
+    height:90vh;
+
+    background:url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1600");
+
+    background-size:cover;
+    background-position:center;
+
+    position:relative;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.overlay{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.55);
+}
+
+.hero-content{
+    position:relative;
+    color:white;
+    text-align:center;
+    max-width:700px;
+    padding:20px;
+}
+
+.hero-content h1{
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:1.2rem;
+}
+
+button{
+    margin-top:25px;
+    background:gold;
+    border:none;
+    padding:15px 30px;
+    border-radius:40px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+#especialidad{
+    margin-top:20px;
+    font-size:1.3rem;
+    color:gold;
+}
+
+/* PLATOS */
+
+.platos{
+    padding:80px 10%;
+    text-align:center;
+}
+
+.platos h2{
+    margin-bottom:50px;
+    font-size:2.5rem;
+    color:#8b0000;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.1);
+
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.card h3{
+    padding:15px;
+}
+
+.card p{
+    padding:0 15px 25px;
+}
+
+/* BANNER */
+
+.banner{
+    background:linear-gradient(
+    45deg,
+    #8b0000,
+    #d62828
+    );
+
+    color:white;
+
+    text-align:center;
+
+    padding:80px 20px;
+}
+
+.banner h2{
+    font-size:2.5rem;
+}
+
+/* ABOUT */
+
+.about{
+    max-width:1000px;
+    margin:auto;
+    padding:80px 20px;
+    text-align:center;
+}
+
+.about h1{
+    margin-bottom:40px;
+}
+
+.about img{
+    width:100%;
+    border-radius:20px;
+    margin-bottom:30px;
+}
+
+.about p{
+    margin-bottom:20px;
+    line-height:1.8;
+}
+
+/* FOOTER */
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:40px;
+}
+
+/* ===== TABLETS ===== */
+
+@media (max-width: 768px){
+
+    header{
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    nav{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a{
+        margin: 5px 10px;
+    }
+
+    .hero{
+        height: 70vh;
+    }
+
+    .hero-content h1{
+        font-size: 2.5rem;
+    }
+
+    .hero-content p{
+        font-size: 1rem;
+    }
+
+    .platos{
+        padding: 50px 20px;
+    }
+
+    .platos h2{
+        font-size: 2rem;
+    }
+
+    .banner h2{
+        font-size: 1.8rem;
+    }
+
+    .about{
+        padding: 50px 20px;
+    }
+}
+
+
+/* ===== MÓVILES ===== */
+
+@media (max-width: 480px){
+
+    .logo{
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .hero{
+        height: 60vh;
+    }
+
+    .hero-content h1{
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .hero-content p{
+        font-size: 0.95rem;
+    }
+
+    button{
+        width: 100%;
+        max-width: 280px;
+        padding: 15px;
+    }
+
+    .cards{
+        grid-template-columns: 1fr;
+    }
+
+    .card img{
+        height: 220px;
+    }
+
+    .banner{
+        padding: 50px 20px;
+    }
+
+    .banner h2{
+        font-size: 1.5rem;
+    }
+
+    footer{
+        padding: 25px;
+    }
+
+}
